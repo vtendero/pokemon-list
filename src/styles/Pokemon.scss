@@ -1,0 +1,30 @@
+.pokemonList {
+    &__item {
+        &--name {
+            text-transform: capitalize;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            width: 90%;
+            text-align: center;
+            padding: 5px;
+        }
+        &--listTypes {
+            display: flex;
+            padding: 5px;
+            &_item {
+                list-style-type: none;
+                text-transform: uppercase;
+                font-size: 12px;
+                color: white;
+                background: grey;
+                border-radius: 10px;
+                width: 45px;
+                height: 20px;
+                margin: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+} 
