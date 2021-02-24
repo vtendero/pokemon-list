@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <PokemonList data= {pokemones} />
+        <PokemonList pokemones= {pokemones} />
       </>
     );
   }
