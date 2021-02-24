@@ -13,8 +13,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: red;
-        background-repeat: repeat-x;
+        box-shadow: inset 15px 50px 3px 0 red;
+        background-origin:padding-box;
         font-family: 'Inconsolata', monospace;
     }
 }
