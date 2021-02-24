@@ -9,7 +9,7 @@ const Pokemon= (props) => {
         );
     });
         return (
-           <article>
+           <>
                 <img src={props.pokemonProp.url} 
                     alt={props.pokemonProp.name}>
                 </img>
@@ -17,7 +17,7 @@ const Pokemon= (props) => {
                 <ul>
                     {pokemonType}
                 </ul>
-            </article>
+            </>
         )
 }
 
