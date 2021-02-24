@@ -1,13 +1,17 @@
 .header {
     font-family: 'Inconsolata', monospace;
     display: flex;
-    height: 80px;
-    background: rgb(76, 185, 158);
-    justify-content: center;
+    height: 100px;
     align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid red;
 
     &__title {
-        color: white;
-        background: rgb(76, 185, 158);
+        text-align: left;
+        font-size: 30px;
+    }
+    &__img {
+        width: 150px;
+        padding: 10px;
     }
 }
