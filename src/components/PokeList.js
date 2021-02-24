@@ -1,11 +1,11 @@
 import React from "react";
 import Pokemon from './Pokemon';
-import '../styles/PokemonList.scss';
+import '../styles/PokeList.scss';
 
 
-class PokemonList extends React.Component {
+class PokeList extends React.Component {
   render() {
-    const item= this.props.pokemones.map(pokemon => {
+    const pokemon= this.props.pokemones.map(pokemon => {
       return (
         <li key= {pokemon.id}>
           <Pokemon pokemonProp= {pokemon} />
@@ -14,11 +14,11 @@ class PokemonList extends React.Component {
     });
     return (
       <ul>
-        {item}
+        {pokemon}
       </ul>
     );
   }
 }
 
 
-export default PokemonList;
+export default PokeList;
