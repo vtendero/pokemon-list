@@ -1,20 +1,29 @@
+@import 'core/variables';
+@import 'core/mixins';
+
+.main {
+    min-height: calc(100vh - 100px - 90px);
+}
+
 .pokemonList {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    justify-content: center;
+   
     &__item {
         list-style-type: none;
-        width: 200px;
-        height: 200px;
-        border: 5px solid black;        
-        border-radius: 200px;
+        width: 220px;
+        height: 220px;
+        border: 5px solid $blackColor;        
+        border-radius: 220px;
         margin: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: inset 15px 50px 3px 0 red;
-        background-origin:padding-box;
+        box-shadow: inset 15px 55px 5px 0 red;
         font-family: 'Inconsolata', monospace;
+        background: $whiteColor;
     }
 }
