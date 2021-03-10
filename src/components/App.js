@@ -1,18 +1,20 @@
-import React from 'react';
-import Header from './Header'
+import React, {useState} from 'react';
+import Header from './Header';
+import Footer from './Footer';
 import pokemones from '../data/data.json';
 import PokeList from './PokeList';
 
-class App extends React.Component {
-  render() {
+
+const App = () => {
+  const [data, setData] = useState(pokemones);
+
     return (
       <>
         <Header />
-        <PokeList pokemones= {pokemones} />
+        <PokeList pokemones= {data} />
+        <Footer />
       </>
     );
-  }
 }
-
 
 export default App;

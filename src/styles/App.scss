@@ -1,5 +1,11 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@import 'core/reset';
+@import 'core/mixins';
+
+html {
+    background: url(../images/gimnasio-pokemon.png) no-repeat;
+    background-size: cover;
+
+    // @include superdesktop {
+    //     background-size: cover;
+    // }
 }

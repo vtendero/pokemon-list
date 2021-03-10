@@ -1,6 +1,6 @@
 import React from "react";
 import Pokemon from './Pokemon';
-import '../styles/PokeList.scss';
+import '../styles/pokeList.scss';
 
 
 class PokeList extends React.Component {
@@ -13,9 +13,11 @@ class PokeList extends React.Component {
       );
     });
     return (
-      <ul className= 'pokemonList'>
-        {pokemon}
-      </ul>
+      <main className='main'>
+        <ul className= 'pokemonList'>
+          {pokemon}
+        </ul>
+      </main>
     );
   }
 }

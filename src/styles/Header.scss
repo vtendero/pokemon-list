@@ -1,17 +1,18 @@
+@import 'core/variables';
+@import 'core/mixins';
+
 .header {
     font-family: 'Inconsolata', monospace;
+    background: $whiteColor;
     display: flex;
     height: 100px;
     align-items: center;
     justify-content: center;
-    border-bottom: 4px solid red;
+    border-bottom: 10px solid red;
+    border-top: 10px solid red;
 
-    &__title {
-        text-align: left;
-        font-size: 30px;
-    }
     &__img {
-        width: 150px;
+        width: 200px;
         padding: 10px;
     }
 }
