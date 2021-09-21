@@ -2,7 +2,6 @@ import React from "react";
 import Pokemon from './Pokemon';
 import '../styles/pokeList.scss';
 
-
 class PokeList extends React.Component {
   render() {
     const pokemon= this.props.pokemones.map(pokemon => {
@@ -21,6 +20,5 @@ class PokeList extends React.Component {
     );
   }
 }
-
 
 export default PokeList;

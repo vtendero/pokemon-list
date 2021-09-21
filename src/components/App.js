@@ -11,7 +11,7 @@ const App = () => {
     return (
       <>
         <Header />
-        <PokeList pokemones= {data} />
+        <PokeList pokemones={data} />
         <Footer />
       </>
     );
