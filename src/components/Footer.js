@@ -20,5 +20,4 @@ const Footer = () =>
         <img className='footer__logo' src={world} alt='Logo'></img>
     </footer>
 
-
 export default Footer;
