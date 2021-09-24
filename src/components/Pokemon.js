@@ -1,13 +1,12 @@
 import { useState } from 'react/cjs/react.development';
 import '../styles/pokemon.scss';
 
-const Pokemon= (props) => {
+function Pokemon(props) {
     const [favHideClass, setFavHideClass] = useState('');
     const [favSizeClass, setFavSizeClass] = useState('');
 
     const handleClick = () => {
         props.handlePokemon(props.id);
-
         if (!favHideClass && !favSizeClass)  {
             setFavHideClass('fav-hide');
             setFavSizeClass('fav-size')
