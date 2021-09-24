@@ -2,15 +2,20 @@ import React from "react";
 import Pokemon from './Pokemon';
 import '../styles/pokeList.scss';
 
-class PokeList extends React.Component {
-  render() {
-    const pokemon= this.props.pokemones.map(pokemon => {
+const PokeList = (props) => {
+  const pokemon= props.pokemons.map(pokemon => {
       return (
-        <li key= {pokemon.id} className= 'pokemonList__item'>
-          <Pokemon pokemonProp= {pokemon} />
+        <li key= {pokemon.id.toString()} className= 'pokemonList__item' id={pokemon.id}>
+          <Pokemon 
+            id={pokemon.id}
+            name={pokemon.name}
+            url={pokemon.url}
+            types={pokemon.types}
+            handlePokemon={props.handlePokemon} />
         </li>
       );
     });
+
     return (
       <main className='main'>
         <ul className= 'pokemonList'>
@@ -18,7 +23,6 @@ class PokeList extends React.Component {
         </ul>
       </main>
     );
-  }
 }
 
 export default PokeList;

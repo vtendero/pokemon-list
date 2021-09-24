@@ -39,23 +39,16 @@
                 align-items: center;
             }
         }
+        
+        &--heart {
+            position:absolute;
+            color: rgb(236, 105, 105);
+            z-index: 100;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 22px;
+        }
     }
-}
-
-.fire {
-    background: orange;
-}
-
-.grass {
-    background: green;
-}
-
-.water {
-    background: lightskyblue;
-}
-
-.bug {
-    background: #804000;
 }
 
 .circle {
@@ -75,3 +68,28 @@
     position: relative;
     bottom: 0px;    
 }
+
+.fav-hide {
+    display: none; 
+}
+
+.fav-size {
+    font-size: 40px;
+}
+
+.fire {
+    background: orange;
+}
+
+.grass {
+    background: green;
+}
+
+.water {
+    background: lightskyblue;
+}
+
+.bug {
+    background: #804000;
+}
+

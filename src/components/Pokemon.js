@@ -1,7 +1,17 @@
+import { useState } from 'react/cjs/react.development';
 import '../styles/pokemon.scss';
 
 const Pokemon= (props) => {
-   const pokemonType= props.pokemonProp.types.map((type, index) => {
+    const [favHideClass, setFavHideClass] = useState('');
+    const [favSizeClass, setFavSizeClass] = useState('');
+
+    const handleClick = () => {
+        props.handlePokemon(props.id);
+        !favHideClass ? setFavHideClass('fav-hide') : setFavHideClass('');
+        !favSizeClass ? setFavSizeClass('fav-size') : setFavSizeClass('');
+    }
+
+   const pokemonType= props.types.map((type, index) => {
     return (
         <li key= {index} className={`pokemonList__item--types_item ${type}`}>
             {type}
@@ -10,17 +20,18 @@ const Pokemon= (props) => {
     });
         return (
            <>
-                <img className='pokemonList__item--image' 
-                    src={props.pokemonProp.url} 
-                    alt={`imagen de ${props.pokemonProp.name}`}>
+                <img className='pokemonList__item--image'
+                    src={props.url} 
+                    alt={`imagen de ${props.name}`}>
                 </img>
-                <div className='circle'></div>
-                <div className='line'></div>
+                <div className={`circle ${favHideClass}`} ></div>
+                <div className={`line ${favHideClass}`}></div>
                 <h3 className='pokemonList__item--name'>
-                    {props.pokemonProp.name}</h3>
+                    {props.name}</h3>
                 <ul className='pokemonList__item--types'>
                     {pokemonType}
                 </ul>
+                <div className={`pokemonList__item--heart ${favSizeClass}`} title="Añadir a favoritos" id={props.id} onClick={handleClick}>❤︎</div>
             </>
         )
 }
