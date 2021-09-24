@@ -3,19 +3,18 @@ import '../styles/pokemon.scss';
 
 function Pokemon(props) {
     const [favHideClass, setFavHideClass] = useState('');
-    // const [favSizeClass, setFavSizeClass] = useState('');
+    const [favSizeClass, setFavSizeClass] = useState('');
 
     const handleClick = () => {
         props.handlePokemon(props.id);
-        !favHideClass ? setFavHideClass('fav-hide') : setFavHideClass('');
-        // if (!favHideClass && !favSizeClass)  {
-        //     setFavHideClass('fav-hide');
-        //     setFavSizeClass('fav-size')
-        // } else {
-        //     setFavHideClass('');
-        //     setFavSizeClass('');
-        // } 
-    };
+        if (!favHideClass && !favSizeClass)  {
+            setFavHideClass('fav-hide');
+            setFavSizeClass('fav-size')
+        } else {
+            setFavHideClass('');
+            setFavSizeClass('');
+        } 
+    }
 
    const pokemonType= props.types.map((type, index) => {
     return (
@@ -37,9 +36,9 @@ function Pokemon(props) {
                 <ul className='pokemonList__item--types'>
                     {pokemonType}
                 </ul>
-                <div className={`pokemonList__item--heart`} title="Añadir a favoritos" id={props.id} onClick={handleClick}>❤︎</div>
+                <div className={`pokemonList__item--heart ${favSizeClass}`} title="Añadir a favoritos" id={props.id} onClick={handleClick}>❤︎</div>
             </>
-        );
+        )
 }
 
 export default Pokemon;
