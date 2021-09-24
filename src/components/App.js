@@ -22,18 +22,6 @@ const App = () => {
       favs.splice(favPokemon, 1);
       setFavs([...favs]);
     }
-
-    
-    const isFavorite = (id) => {
-      return favs.findIndex((pokemon) => id === pokemon.id) !== -1;
-    }
-    
-    if (isFavorite(selected.id)) {
-      console.log('fav');
-
-    } else {
-      console.log('no fav');
-    }
   };
 
     return (
