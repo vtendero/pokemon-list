@@ -7,8 +7,14 @@ const Pokemon= (props) => {
 
     const handleClick = () => {
         props.handlePokemon(props.id);
-        !favHideClass ? setFavHideClass('fav-hide') : setFavHideClass('');
-        !favSizeClass ? setFavSizeClass('fav-size') : setFavSizeClass('');
+
+        if (!favHideClass && !favSizeClass)  {
+            setFavHideClass('fav-hide');
+            setFavSizeClass('fav-size')
+        } else {
+            setFavHideClass('');
+            setFavSizeClass('');
+        } 
     }
 
    const pokemonType= props.types.map((type, index) => {
