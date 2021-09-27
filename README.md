@@ -2,7 +2,7 @@
 
 El ejercicio consiste en desarrollar una página web sencilla que muestre un listado de pokemons, con una tarjeta para cada uno con información relevante, como el nombre, tipos y una imagen. También se pueden marcar como favoritos. 
 
-![](https://github.com/vtendero/pokemon-list/blob/master/images/readme.JPG)
+![](https://github.com/vtendero/pokemon-list/blob/master/src/images/Readme.JPG)
 
 ### Requerimientos para el ejercicio
 
@@ -23,15 +23,19 @@ respectivamente para el listado y para la card de cada Pokemon.
 ### Scripts para iniciar el proyecto
 
 Descarga o clona este repositorio.
+
 Necesitas tener instalado Node.js.
+
 Instala dependencias con $ npm install.
 ```
 npm install
 ```
+
 Ejecuta el proyecto con $ npm start.
 ```
 npm start
 ```
+
 Para publicar en producción ("build && rm -rf docs / && mv build / docs / * && git commit -m 'Update github pages' && git push").
 ```
 npm run docs-and-push
